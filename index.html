@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youcef Boukermouche - Digital Card</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -26,8 +28,10 @@
       color: #222;
     }
     .item {
-      display: block;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 12px 0;
       padding: 18px;
       border-radius: 10px;
@@ -37,6 +41,9 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       transition: 0.3s;
+    }
+    .item i {
+      font-size: 20px;
     }
     .item:hover {
       transform: translateY(-3px);
@@ -54,12 +61,12 @@
   <div class="card">
     <h2>Youcef Boukermouche</h2>
 
-    <a href="mailto:youcefbouka19@gmail.com" class="item email">📧 Email: youcefbouka19@gmail.com</a>
-    <a href="tel:+213657702347" class="item phone">📞 Call: +213657702347</a>
-    <a href="https://wa.me/213657702347" class="item whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/+213657702347" class="item telegram">📲 Telegram</a>
-    <a href="https://www.facebook.com/share/17JbJCodgC/" class="item facebook">📘 Facebook</a>
-    <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram">📷 Instagram</a>
+    <a href="mailto:youcefbouka19@gmail.com" class="item email"><i class="fa-solid fa-envelope"></i> Email</a>
+    <a href="tel:+213657702347" class="item phone"><i class="fa-solid fa-phone"></i> Call</a>
+    <a href="https://wa.me/213657702347" class="item whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://t.me/+213657702347" class="item telegram"><i class="fa-brands fa-telegram"></i> Telegram</a>
+    <a href="https://www.facebook.com/share/17JbJCodgC/" class="item facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
   </div>
 </body>
 </html>
