@@ -67,6 +67,337 @@
       object-fit: cover;
       border: 4px solid #f0f0f0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #ccc;
+    }
+    
+    .card h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: var(--primary-color);
+    }
+    
+    .card h2 {
+      font-size: 16px;
+      margin: 0 0 25px;
+      font-weight: normal;
+      color: var(--light-text);
+    }
+    
+    .contact-section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-section:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+    }
+    
+    .contact-section h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    
+    .btn:hover, .btn:focus {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .btn span {
+      margin-left: 8px;
+      font-size: 18px;
+    }
+    
+    .whatsapp {
+      background: var(--whatsapp-color);
+      color: #fff;
+    }
+    
+    .phone {
+      background: var(--phone-color);
+      color: #fff;
+    }
+    
+    .email {
+      background: var(--email-color);
+      color: #fff;
+    }
+    
+    .instagram {
+      background: var(--instagram-color);
+      color: #fff;
+    }
+    
+    .facebook {
+      background: var(--facebook-color);
+      color: #fff;
+    }
+    
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--light-text);
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    
+    .upload-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .upload-btn:hover, .upload-btn:focus {
+      background: var(--primary-color);
+      outline: none;
+    }
+    
+    #imageUpload {
+      display: none;
+    }
+    
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 15px;
+      }
+      
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+      }
+      
+      .card h1 {
+        font-size: 22px;
+      }
+      
+      .btn {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+      
+      .contact-section {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- صورة الملف الشخصي -->
+    <div class="profile-img" id="profileImageContainer">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiNGNUY1RjUiLz4KPHN2ZyB4PSIzMCIgeT0iMzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjQ0NDQ0NDIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6bTAgMTMuNWMyLjczIDAgNS4wNiAxLjQ5IDYuMzIgMy41SDUuNjhjMS4yNi0yLjAxIDMuNTktMy41IDYuMzItMy41eiIvPgo8L3N2Zz4KPC9zdmc+" 
+           alt="صورة يوسف بوكرموش" 
+           class="profile-img" 
+           id="profileImage">
+    </div>
+    
+    <!-- زر لتحميل الصورة (اختياري) -->
+    <label for="imageUpload" class="upload-btn" tabindex="0">📷 تغيير الصورة</label>
+    <input type="file" id="imageUpload" accept="image/*">
+    
+    <h1>يوسف بوكرموش</h1>
+    <h2>اتصال مباشر</h2>
+    
+    <!-- قائمة جهات الاتصال مرتبة بشكل عمودي -->
+    <div class="contact-list">
+      <div class="contact-section">
+        <h3><span aria-hidden="true">📱</span> واتساب</h3>
+        <div class="btn-container">
+          <a href="https://wa.me/213657702347" class="btn whatsapp" aria-label="اتصال عبر واتساب بالرقم 657702347">
+            <span aria-hidden="true">💬</span>+213657702347
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-section">
+        <h3><span aria-hidden="true">📞</span> اتصال هاتفي</h3>
+        <div class="btn-container">
+          <a href="tel:+213657702347" class="btn phone" aria-label="اتصال هاتفي بالرقم 657702347">
+            <span aria-hidden="true">📞</span>+213657702347
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-section">
+        <h3><span aria-hidden="true">📧</span> البريد الإلكتروني</h3>
+        <div class="btn-container">
+          <a href="mailto:youcefbouka19@gmail.com" class="btn email" aria-label="إرسال بريد إلكتروني إلى youcefbouka19@gmail.com">
+            <span aria-hidden="true">📧</span>youcefbouka19@gmail.com
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-section">
+        <h3><span aria-hidden="true">📷</span> إنستغرام</h3>
+        <div class="btn-container">
+          <a href="https://www.instagram.com/youcefbouka2347" class="btn instagram" aria-label="زيارة حساب إنستغرام youcefbouka2347">
+            <span aria-hidden="true">📷</span>youcefbouka2347
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-section">
+        <h3><span aria-hidden="true">👥</span> فيسبوك</h3>
+        <div class="btn-container">
+          <a href="https://www.facebook.com/share/1BW8ZM9j2Y/" class="btn facebook" aria-label="زيارة صفحة فيسبوك يوسف بوكرموش">
+            <span aria-hidden="true">👥</span>يوسف بوكرموش
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      © 2023 يوسف بوكرموش - جميع الحقوق محفوظة
+    </div>
+  </div>
+
+  <script>
+    // إضافة تأثيرات تفاعلية بسيطة
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.btn');
+      
+      buttons.forEach(button => {
+        button.addEventListener('mousedown', function() {
+          this.style.transform = 'translateY(0)';
+        });
+        
+        button.addEventListener('mouseup', function() {
+          this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('touchstart', function() {
+          this.style.transform = 'translateY(0)';
+        });
+        
+        button.addEventListener('touchend', function() {
+          this.style.transform = 'translateY(-2px)';
+        });
+      });
+      
+      // وظيفة لتحميل الصورة
+      const imageUpload = document.getElementById('imageUpload');
+      const profileImage = document.getElementById('profileImage');
+      
+      imageUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          // التحقق من نوع الملف
+          if (!file.type.match('image.*')) {
+            alert('الرجاء اختيار صورة صالحة');
+            return;
+          }
+          
+          // التحقق من حجم الملف (5MB كحد أقصى)
+          if (file.size > 5 * 1024 * 1024) {
+            alert('حجم الصورة كبير جداً. الرجاء اختيار صورة أصغر من 5MB');
+            return;
+          }
+          
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            profileImage.src = e.target.result;
+            profileImage.alt = 'صورة يوسف بوكرموش المخصصة';
+          };
+          reader.onerror = function() {
+            alert('حدث خطأ أثناء تحميل الصورة');
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      
+      // إضافة حدث focus للوصول باستخدام لوحة المفاتيح
+      const uploadBtn = document.querySelector('.upload-btn');
+      uploadBtn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          imageUpload.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>      color: var(--text-color);
+    }
+    
+    .card {
+      background: #fff;
+      padding: 30px 24px;
+      border-radius: 20px;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      max-width: 380px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to left, var(--whatsapp-color), var(--instagram-color), var(--facebook-color));
+    }
+    
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      object-fit: cover;
+      border: 4px solid #f0f0f0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       background-color: #f5f5f5; /* خلفية احتياطية */
       display: flex;
       align-items: center;
