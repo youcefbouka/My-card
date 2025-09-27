@@ -6,6 +6,8 @@
   <title>Youcef Boukermouche - Digital Card</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background: #f0f2f5;
@@ -16,17 +18,24 @@
       align-items: center;
       min-height: 100vh;
     }
+
     .card {
-      width: 100%;
+      width: 90%;           /* أقل من عرض الشاشة لفراغ جانبي */
       max-width: 450px;
       text-align: center;
-      padding: 0 15px; /* مسافة جانبية للبطاقة */
+      margin: 0 auto;       /* يحافظ على تساوي الفراغ الجانبي */
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
+
     h2 {
       margin: 10px 0 20px;
       font-size: 26px;
       color: #222;
     }
+
     .profile {
       width: 140px;
       height: 140px;
@@ -37,21 +46,23 @@
       margin: 20px auto;
       display: block;
     }
+
     .item {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       margin: 12px 0;
-      padding: 18px 25px; /* زيادة المسافة الجانبية */
-      border-radius: 10px;
+      padding: 18px 30px;      /* زيادة المسافة الجانبية */
+      border-radius: 12px;
       color: #fff;
       font-size: 18px;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: 0.3s;
     }
+
     .item i { font-size: 20px; }
     .item:hover { transform: translateY(-3px); opacity: 0.95; }
 
@@ -76,4 +87,4 @@
     <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
   </div>
 </body>
-</html> 
+</html>
