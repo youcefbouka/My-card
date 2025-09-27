@@ -7,69 +7,59 @@
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #2193b0, #6dd5ed);
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      margin: 0;
-      padding: 15px;
     }
     .card {
-      background: #fff;
-      padding: 25px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       width: 100%;
-      max-width: 400px;
-      text-align: center;
+      max-width: 450px;
     }
     h2 {
-      margin: 0;
-      font-size: 24px;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 26px;
       color: #222;
     }
-    .divider {
-      height: 2px;
-      background: linear-gradient(90deg, #2193b0, #6dd5ed);
-      margin: 15px auto 20px auto;
-      width: 70%;
-      border-radius: 2px;
-    }
     .item {
+      display: block;
+      text-align: center;
       margin: 12px 0;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .item a {
-      color: #2193b0;
-      text-decoration: none;
-      font-weight: 500;
-      word-break: break-word;
-    }
-    .item a:hover {
-      text-decoration: underline;
-    }
-    .emoji {
+      padding: 18px;
+      border-radius: 10px;
+      color: #fff;
       font-size: 18px;
-      margin-right: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: 0.3s;
     }
+    .item:hover {
+      transform: translateY(-3px);
+      opacity: 0.95;
+    }
+    .email { background: #ff9800; }
+    .phone { background: #007bff; }
+    .whatsapp { background: #25D366; }
+    .telegram { background: #0088cc; }
+    .facebook { background: #3b5998; }
+    .instagram { background: #e4405f; }
   </style>
 </head>
 <body>
   <div class="card">
     <h2>Youcef Boukermouche</h2>
-    <div class="divider"></div>
 
-    <div class="item"><span class="emoji">📧</span><a href="mailto:youcefbouka19@gmail.com">youcefbouka19@gmail.com</a></div>
-    <div class="item"><span class="emoji">📞</span><a href="tel:+213657702347">+213657702347</a> (Phone)</div>
-    <div class="item"><span class="emoji">💬</span><a href="https://wa.me/213657702347">WhatsApp</a></div>
-    <div class="item"><span class="emoji">📲</span><a href="https://t.me/+213657702347">Telegram</a></div>
-    <div class="item"><span class="emoji">📘</span><a href="https://www.facebook.com/share/17JbJCodgC/">Facebook</a></div>
-    <div class="item"><span class="emoji">📷</span><a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==">Instagram</a></div>
+    <a href="mailto:youcefbouka19@gmail.com" class="item email">📧 Email: youcefbouka19@gmail.com</a>
+    <a href="tel:+213657702347" class="item phone">📞 Call: +213657702347</a>
+    <a href="https://wa.me/213657702347" class="item whatsapp">💬 WhatsApp</a>
+    <a href="https://t.me/+213657702347" class="item telegram">📲 Telegram</a>
+    <a href="https://www.facebook.com/share/17JbJCodgC/" class="item facebook">📘 Facebook</a>
+    <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram">📷 Instagram</a>
   </div>
 </body>
-                           </html>
+</html>
