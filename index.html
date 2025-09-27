@@ -1,40 +1,201 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بطاقة يوسف بوكرموش</title>
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --whatsapp-color: #25D366;
-      --phone-color: #007bff;
-      --email-color: #ff9800;
-      --instagram-color: #E1306C;
-      --facebook-color: #1877F2;
-      --text-color: #333;
-      --light-text: #666;
-      --background: linear-gradient(135deg, #f5f7fa, #eaeef3);
-      --card-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: var(--background);
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      color: var(--text-color);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات يوسف بوكرموش الشخصية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .name {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .contact-value {
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .instagram { background-color: #e4405f; }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .icon {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="name">يوسف بوكرموش</h1>
+            <p>معلومات الاتصال والشبكات الاجتماعية</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">معلومات الاتصال</h2>
+            
+            <div class="contact-item">
+                <div class="icon">✉️</div>
+                <div class="contact-info">
+                    <div class="contact-label">البريد الإلكتروني</div>
+                    <div class="contact-value">youcefbouka19@gmail.com</div>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="icon">📞</div>
+                <div class="contact-info">
+                    <div class="contact-label">رقم الهاتف</div>
+                    <div class="contact-value">+213657702347</div>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="icon">💬</div>
+                <div class="contact-info">
+                    <div class="contact-label">واتساب</div>
+                    <div class="contact-value">+213657702347</div>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="icon">📱</div>
+                <div class="contact-info">
+                    <div class="contact-label">تيليجرام</div>
+                    <div class="contact-value">+213657702347</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">الشبكات الاجتماعية</h2>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/17JbJCodgC/" class="social-link facebook" target="_blank">f</a>
+                <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="social-link instagram" target="_blank">in</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>      color: var(--text-color);
     }
     
     .card {
