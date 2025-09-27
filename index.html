@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youcef Boukermouche - بطاقة رقمية</title>
-  <meta name="description" content="بطاقة Youcef Boukermouche الرقمية - تواصل معي عبر مختلف المنصات">
+  <title>Youcef Boukermouche - Digital Card</title>
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: "Segoe UI", Arial, "Noto Sans Arabic", sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #f0f2f5;
       margin: 0;
       padding: 0;
@@ -27,7 +26,6 @@
       margin: 10px 0 20px;
       font-size: 26px;
       color: #222;
-      font-weight: 600;
     }
     .profile {
       width: 140px;
@@ -52,16 +50,12 @@
       font-weight: bold;
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+      transition: 0.3s;
+      cursor: pointer;
     }
-    .item i {
-      font-size: 20px;
-    }
-    .item:hover {
-      transform: translateY(-3px);
-      opacity: 0.95;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
+    .item i { font-size: 20px; }
+    .item:hover { transform: translateY(-3px); opacity: 0.95; }
+
     .email { background: #ff9800; }
     .phone { background: #007bff; }
     .whatsapp { background: #25D366; }
@@ -72,15 +66,32 @@
 </head>
 <body>
   <div class="card">
-    <img src="https://raw.githubusercontent.com/youcefbouka/My-card/main/runcomfy-2e6598c5-f1d3-A-professional-portr-1758923012030.jpeg" alt="صورة Youcef Boukermouche الشخصية" class="profile">
+    <img src="https://raw.githubusercontent.com/youcefbouka/My-card/main/runcomfy-2e6598c5-f1d3-A-professional-portr-1758923012030.jpeg" alt="Youcef Boukermouche" class="profile">
     <h2>Youcef Boukermouche</h2>
 
-    <a href="mailto:youcefbouka19@gmail.com" class="item email"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</a>
-    <a href="tel:+213657702347" class="item phone"><i class="fa-solid fa-phone"></i> اتصل</a>
-    <a href="https://wa.me/213657702347" class="item whatsapp"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
-    <a href="https://t.me/+213657702347" class="item telegram"><i class="fa-brands fa-telegram"></i> تيليجرام</a>
-    <a href="https://www.facebook.com/share/17JbJCodgC/" class="item facebook"><i class="fa-brands fa-facebook"></i> فيسبوك</a>
-    <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram"><i class="fa-brands fa-instagram"></i> إنستغرام</a>
+    <!-- البريد -->
+    <a href="mailto:youcefbouka19@gmail.com" class="item email" onclick="copyToClipboard('youcefbouka19@gmail.com')">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+
+    <!-- الهاتف -->
+    <a href="tel:+213657702347" class="item phone" onclick="copyToClipboard('+213657702347')">
+      <i class="fa-solid fa-phone"></i> Call
+    </a>
+
+    <!-- بقية الروابط -->
+    <a href="https://wa.me/213657702347" class="item whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://t.me/+213657702347" class="item telegram"><i class="fa-brands fa-telegram"></i> Telegram</a>
+    <a href="https://www.facebook.com/share/17JbJCodgC/" class="item facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    <a href="https://www.instagram.com/youcefbouka2347?igsh=MWs2c3ZzMXYxZGIyMA==" class="item instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
   </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(text + " copied to clipboard!");
+      });
+    }
+  </script>
 </body>
-      </html> 
+</html>
